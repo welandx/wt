@@ -2,10 +2,12 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import AppIndex from '@/components/home/AppIndex'
 import Login from '@/components/login'
+import Home from '../components/Home'
 
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/login',
@@ -13,9 +15,20 @@ export default new Router({
       component: Login
     },
     {
-      path: '/index',
-      name: 'AppIndex',
-      component: AppIndex
+      path: '/home',
+      name: 'Home',
+      component: Home,
+      redirect: '/index',
+      children: [
+        {
+          path: '/index',
+          name: 'AppIndex',
+          component: AppIndex,
+          meta: {
+            requireAuth: true
+          }
+        }
+      ]
     }
   ]
 })
