@@ -24,8 +24,7 @@ export default {
       navList: [
         {name: '/index', navItem: '首页'},
         {name: '/jotter', navItem: '选课中心'},
-        {name: '/library', navItem: '图书馆'},
-        {name: '/admin', navItem: '个人中心'}
+        {name: '/lib', navItem: '个人中心'}
       ]
     }
   }

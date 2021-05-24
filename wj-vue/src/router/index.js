@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import AppIndex from '@/components/home/AppIndex'
 import Login from '@/components/login'
 import Home from '../components/Home'
-
+import LibIndex from '../components/Lib/LibIndex'
 Vue.use(Router)
 
 export default new Router({
@@ -24,6 +24,14 @@ export default new Router({
           path: '/index',
           name: 'AppIndex',
           component: AppIndex,
+          meta: {
+            requireAuth: true
+          }
+        },
+        {
+          path: '/lib',
+          name: 'Lib',
+          component: LibIndex,
           meta: {
             requireAuth: true
           }
