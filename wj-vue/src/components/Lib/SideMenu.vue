@@ -6,15 +6,11 @@
     active-text-color="red">
     <el-menu-item index="0">
       <i class="el-icon-menu"></i>
-      <span slot="title">课程</span>
+      <span slot="title">全部信息</span>
     </el-menu-item>
     <el-menu-item index="1">
       <i class="el-icon-menu"></i>
-      <span slot="title">学绩</span>
-    </el-menu-item>
-    <el-menu-item index="2">
-      <i class="el-icon-menu"></i>
-      <span slot="title">培养方案</span>
+      <span slot="title">筛选统计</span>
     </el-menu-item>
   </el-menu>
 </template>
